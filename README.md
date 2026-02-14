@@ -2,6 +2,14 @@
 
 AI-powered learning assistant for 1st-year B.Tech students in India, translating technical code logic into regional analogies (Hinglish).
 
+## 🌐 Live Demo
+
+**Try LogicLens AI**: [Coming Soon - Deploy to get URL]
+
+<!-- After deployment, replace above with:
+**Try LogicLens AI**: [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)
+-->
+
 ## Features
 
 - Google OAuth authentication
