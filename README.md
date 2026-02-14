@@ -6,8 +6,20 @@ AI-powered learning assistant for 1st-year B.Tech students in India, translating
 
 - Google OAuth authentication
 - Streamlit-based mobile-friendly interface
+- **Real-time Syntax Validation** - Checks code before analysis
+  - Detects indentation errors (Python)
+  - Finds missing semicolons (Java, C, C++)
+  - Identifies missing colons and braces
+  - Provides fix suggestions in Hinglish
 - Gemini API integration for semantic logic analysis
 - Logic-to-Analogy engine with Hinglish explanations
+- **Offline Syntax Guide** - Complete programming reference without API calls
+  - Python, Java, C, C++, JavaScript syntax
+  - Hinglish explanations for every concept
+  - Searchable topics
+  - Code examples with rules
+- Visual flowchart generation
+- Demo mode fallback when API quota is exhausted
 
 ## Setup
 
@@ -34,3 +46,4 @@ streamlit run app.py
 - Google OAuth (Authentication)
 - Gemini API (Logic Analysis)
 - Python 3.9+
+- Offline Syntax Database (No API needed)

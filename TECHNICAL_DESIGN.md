@@ -85,17 +85,25 @@ LogicLens AI is an AI-powered learning assistant designed for 1st-year B.Tech st
 
 #### 2.1 Gemini SDK Integration
 
-**Model**: Gemini Pro (gemini-pro)
+**Model**: Gemini 2.0 Flash (gemini-2.0-flash-001)
+
+**Note**: Using the new `google-genai` SDK (v0.3.0+) as the old `google.generativeai` package is deprecated.
 
 **Configuration**:
 ```python
-genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-pro')
+from google import genai
 
-# Parameters
-temperature = 0.7  # Balance creativity and consistency
-max_tokens = 1024  # Sufficient for detailed explanations
-top_p = 0.9       # Nucleus sampling for quality
+client = genai.Client(api_key=GEMINI_API_KEY)
+
+response = client.models.generate_content(
+    model='gemini-2.0-flash-001',
+    contents=prompt
+)
+
+# Parameters can be configured via GenerateContentConfig
+# temperature = 0.7  # Balance creativity and consistency
+# max_tokens = 1024  # Sufficient for detailed explanations
+# top_p = 0.9       # Nucleus sampling for quality
 ```
 
 **Why Gemini?**
@@ -115,19 +123,19 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Chain 1: Code Analysis
 analysis_chain = LLMChain(
-    llm=ChatGoogleGenerativeAI(model="gemini-pro"),
+    llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash-001"),
     prompt=code_analysis_template
 )
 
 # Chain 2: Analogy Generation
 analogy_chain = LLMChain(
-    llm=ChatGoogleGenerativeAI(model="gemini-pro"),
+    llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash-001"),
     prompt=analogy_template
 )
 
 # Chain 3: Flowchart Structure
 flowchart_chain = LLMChain(
-    llm=ChatGoogleGenerativeAI(model="gemini-pro"),
+    llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash-001"),
     prompt=flowchart_template
 )
 

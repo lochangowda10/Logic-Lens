@@ -8,6 +8,8 @@
 pip install -r requirements.txt
 ```
 
+Note: The app now uses the newer `google-genai` package (the old `google-generativeai` is deprecated).
+
 ### 2. Get Gemini API Key
 
 1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
@@ -70,6 +72,9 @@ for i in range(5):
 
 ## Troubleshooting
 
-- **API Error**: Check your Gemini API key
-- **Import Error**: Reinstall requirements
+- **API Quota Error (429)**: The app automatically retries and falls back to demo mode. See TROUBLESHOOTING.md
+- **API Error**: Check your Gemini API key in `.env`
+- **Import Error**: Run `pip install --upgrade google-genai`
 - **Port in use**: Change port with `streamlit run app.py --server.port 8502`
+
+For detailed troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
