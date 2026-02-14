@@ -1,9 +1,0 @@
-streamlit==1.31.0
-google-auth==2.27.0
-google-auth-oauthlib==1.2.0
-google-auth-httplib2==0.2.0
-google-api-python-client==2.116.0
-python-dotenv==1.0.0
-google-generativeai==0.3.2
-graphviz==0.20.1
-streamlit-agraph==0.0.45
