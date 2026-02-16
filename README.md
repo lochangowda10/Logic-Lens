@@ -4,7 +4,7 @@ AI-powered learning assistant for 1st-year B.Tech students in India, translating
 
 ## 🌐 Live Demo
 
-**Try LogicLens AI**: [Coming Soon - Deploy to get URL]
+**Try LogicLens AI**: https://logic-lens.streamlit.app/
 
 <!-- After deployment, replace above with:
 **Try LogicLens AI**: [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)
@@ -55,3 +55,4 @@ streamlit run app.py
 - Gemini API (Logic Analysis)
 - Python 3.9+
 - Offline Syntax Database (No API needed)
+
